@@ -1,0 +1,14 @@
+version: '3'
+services:
+  lamport_clock:
+    build: .
+    command: ["mpirun", "-np", "4", "python", "lamport_clock.py"]
+
+  mutual_exclusion:
+    build: .
+    command: ["mpirun", "-np", "4", "python", "mutual_exclusion.py"]
+
+  leader_election:
+    build: .
+    command: ["mpirun", "-np", "4", "python", "leader_election.py"]
+
